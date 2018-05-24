@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="script.js" defer></script>
+    <script src="data.js" defer></script><script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+</head>
+
+<body>
+    <div id="display">
+        <input type="radio" id="switchmode2d" name="switchmode" checked>
+        <label for="switchmode2d">2D</label>
+        <input type="radio" id="switchmode3d" name="switchmode">
+        <label for="switchmode3d">3D</label>
+        <br>
+        <canvas id="canvas2D"></canvas>
+        <iframe src="3d/3d.html" frameborder="0" id="canvas3D"></iframe>
+        <div id="searchingOverlay"></div>
+    </div>
+    <div id="controls">
+        <input type="radio" id="switchcontrolsbtns" name="switchcontrols" checked>
+        <label for="switchcontrolsbtns">Controls</label>
+        <input type="radio" id="switchcontrolstxt" name="switchcontrols">
+        <label  for="switchcontrolstxt">Log</label>
+        <br>
+        <div id="controlsbtns">
+            <div id="togglebutton-container">
+                <div class="togglebutton" id="btn1" state="record"></div>
+                <div class="togglebutton disabled" id="btn2" state="pause"></div>
+            </div>
+        </div>
+        <div id="controlstxt">
+            <textarea id="displaytext"></textarea>
+        </div>
+    </div>
+</body>
+
+</html>
